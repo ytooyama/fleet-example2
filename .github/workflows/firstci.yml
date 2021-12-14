@@ -1,0 +1,11 @@
+name: Hello, World!
+on: push
+# CIでチェックしたいことを色々書く
+# 例えばコンテナイメージの脆弱性スキャンとか、YAMLの構文チェックとか、 
+# 特定の言語で記述したコードならそれの構文チェックとか色々。
+jobs:
+  build:
+    name: Greeting
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello, World!"
