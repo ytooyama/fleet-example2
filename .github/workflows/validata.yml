@@ -13,4 +13,5 @@ jobs:
         run: |
           cat frontend-deployment.yaml
           cat frontend-service.yaml
+          cat failure
         working-directory: ./simple
