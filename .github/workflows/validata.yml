@@ -1,0 +1,16 @@
+name: Validate Data
+on: push
+
+jobs:
+  validate-data:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Validate workflows
+        run: |
+          cat frontend-deployment.yaml
+          cat frontend-service.yaml
+        working-directory: ./simple
