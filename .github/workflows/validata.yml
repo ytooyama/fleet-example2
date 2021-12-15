@@ -14,3 +14,9 @@ jobs:
           cat frontend-deployment.yaml
           cat frontend-service.yaml
         working-directory: ./simple
+
+      - name: Check the K8s Object
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Automated Change
+          branch: stable

@@ -1,6 +1,6 @@
 name: Validate container image 
 on:
-  - pull_request
+  - push
 
 jobs:
   validate-data-Docker:
@@ -16,3 +16,9 @@ jobs:
           cat index.html
           php guestbook.php
         working-directory: /var/www/html
+
+      - name: Check the Container image
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Automated Change
+          branch: stable
