@@ -1,6 +1,5 @@
 name: Validate Data
 on:
-  - push
   - pull_request
 jobs:
   validate-data:

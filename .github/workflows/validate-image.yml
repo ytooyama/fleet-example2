@@ -1,6 +1,5 @@
 name: Validate container image 
 on:
-  - push
   - pull_request
 
 jobs:
@@ -13,5 +12,7 @@ jobs:
     steps:
       - name: Validate workflows
         run: |
+          cat controllers.js
+          cat index.html
           php guestbook.php
         working-directory: /var/www/html
