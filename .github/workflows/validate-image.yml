@@ -1,0 +1,17 @@
+name: Validate container image 
+on:
+  - push
+  - pull_request
+
+jobs:
+  validate-data-Docker:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    container:
+      image: gcr.io/google-samples/gb-frontend:v4
+    steps:
+      - name: Validate workflows
+        run: |
+          php guestbook.php
+        working-directory: /var/www/html
