@@ -4,4 +4,4 @@
 
 - [Fleet Examples](https://github.com/rancher/fleet-examples)
 
-GitHub Actionsを動かしつつ、Rancher CDを試すためのテスト用です。
+GitHub Actionsを動かしつつ、GitOpsを試すためのテスト用です。
